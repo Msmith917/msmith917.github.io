@@ -16,6 +16,10 @@ h3{
 button {
   font-size: 50px;
 }
+.buttonSize {
+  font-size: 20px;
+  margin-right: 40px;
+}
 div {
   width: 750px;
   border: 10px solid black;
