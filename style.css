@@ -2,7 +2,7 @@ h1 {
   font-size: 45px
 }
 h2{
-  font-size: 20px;
+  font-size: 50px;
   text-align: left;
   display: inline-block;
 }
@@ -17,7 +17,7 @@ button {
   font-size: 50px;
 }
 .buttonSize {
-  font-size: 20px;
+  font-size: 40px;
   margin-right: 40px;
 }
 div {
