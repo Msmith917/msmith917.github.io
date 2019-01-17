@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    function setCheck(){
+      localStorage.setItem("check",0);
+    }
+    function addCheck(){
+      var bal = localStorage.getItem("check");
+      var add = prompt('Enter how much you would like to add: ');
+      var newBal = parseFloat(bal, 10) + parseFloat(add, 10);
+      localStorage.setItem("check", newBal);
+    }
+    function subCheck(){
+      var bal = localStorage.getItem("check");
+      var add = prompt('Enter how much you would like to subtract: ');
+      var newBal = parseFloat(bal, 10) - parseFloat(add, 10);
+      localStorage.setItem("check", newBal);
+    }
+    function getCheck() {
+      var bal = localStorage.getItem("check");
+      document.write(parseFloat(bal, 10));
+    }
+    function setSave(){
+      localStorage.setItem("save",0);
+    }
+    function addSave(){
+      var bal = localStorage.getItem("save");
+      var add = prompt('Enter how much you would like to add: ');
+      var newBal = parseFloat(bal, 10) + parseFloat(add, 10);
+      localStorage.setItem("save", newBal);
+    }
+    function subSave(){
+      var bal = localStorage.getItem("save");
+      var add = prompt('Enter how much you would like to subtract: ');
+      var newBal = parseFloat(bal, 10) - parseFloat(add, 10);
+      localStorage.setItem("save", newBal);
+    }
+    function getSave() {
+      var bal = localStorage.getItem("save");
+      document.write(parseFloat(bal, 10));
+    }
+</script>
+    <title>Data Bank</title>
+    </head>
+
+    <body>
+      <h1><center>Checking Account</center><h1>
+        <center><div>
+          <h class="buttonSize"><button class="buttonSize" onclick="setCheck()">Reset</button></h><h2>Balance: $</h2>
+          <h2><script>getCheck()</script></h2>
+          <hr size="2px" color="black">
+          <p1 class="resize">Add Money to Balance</p1>
+          <p2 class="resize">Subract Money to Balance</p2>
+          <br>
+          <h3><button onclick="addCheck()">+</button></h3>
+          <h3><button onclick="subCheck()">-</button></h3>
+        </div></center>
+        <hr size="15px" color="black">
+        <h1><center>Savings Account</center><h1>
+          <center><div>
+            <h class="buttonSize"><button class="buttonSize" onclick="setSave()">Reset</button></h><h2>Balance: $</h2>
+            <h2><script>getSave()</script></h2>
+            <hr size="2px" color="black">
+            <p1 class="resize">Add Money to Balance</p1>
+            <p2 class="resize">Subract Money to Balance</p2>
+            <br>
+            <h3><button onclick="addSave()">+</button></h3>
+            <h3><button onclick="subSave()">-</button></h3>
+          </div></center>
+        </body>
+
+  </html>

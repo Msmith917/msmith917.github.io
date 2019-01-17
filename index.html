@@ -1,75 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
-    function setCheck(){
-      localStorage.setItem("check",0);
-    }
-    function addCheck(){
-      var bal = localStorage.getItem("check");
-      var add = prompt('Enter how much you would like to add: ');
-      var newBal = parseFloat(bal, 10) + parseFloat(add, 10);
-      localStorage.setItem("check", newBal);
-    }
-    function subCheck(){
-      var bal = localStorage.getItem("check");
-      var add = prompt('Enter how much you would like to subtract: ');
-      var newBal = parseFloat(bal, 10) - parseFloat(add, 10);
-      localStorage.setItem("check", newBal);
-    }
-    function getCheck() {
-      var bal = localStorage.getItem("check");
-      document.write(parseFloat(bal, 10));
-    }
+	<head>
+		<title>Portfolio Site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    function setSave(){
-      localStorage.setItem("save",0);
-    }
-    function addSave(){
-      var bal = localStorage.getItem("save");
-      var add = prompt('Enter how much you would like to add: ');
-      var newBal = parseFloat(bal, 10) + parseFloat(add, 10);
-      localStorage.setItem("save", newBal);
-    }
-    function subSave(){
-      var bal = localStorage.getItem("save");
-      var add = prompt('Enter how much you would like to subtract: ');
-      var newBal = parseFloat(bal, 10) - parseFloat(add, 10);
-      localStorage.setItem("save", newBal);
-    }
-    function getSave() {
-      var bal = localStorage.getItem("save");
-      document.write(parseFloat(bal, 10));
-    }
-</script>
-    <title>Data Bank</title>
-    </head>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-    <body>
-      <h1><center>Checking Account</center><h1>
-        <center><div>
-          <h class="buttonSize"><button class="buttonSize" onclick="setCheck()">Reset</button></h><h2>Balance: $</h2>
-          <h2><script>getCheck()</script></h2>
-          <hr size="2px" color="black">
-          <p1 class="resize">Add Money to Balance</p1>
-          <p2 class="resize">Subract Money to Balance</p2>
-          <br>
-          <h3><button onclick="addCheck()">+</button></h3>
-          <h3><button onclick="subCheck()">-</button></h3>
-        </div></center>
-        <hr size="15px" color="black">
-        <h1><center>Savings Account</center><h1>
-          <center><div>
-            <h class="buttonSize"><button class="buttonSize" onclick="setSave()">Reset</button></h><h2>Balance: $</h2>
-            <h2><script>getSave()</script></h2>
-            <hr size="2px" color="black">
-            <p1 class="resize">Add Money to Balance</p1>
-            <p2 class="resize">Subract Money to Balance</p2>
-            <br>
-            <h3><button onclick="addSave()">+</button></h3>
-            <h3><button onclick="subSave()">-</button></h3>
-          </div></center>
-        </body>
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Michael W. Smith</span>
+								</a>
 
-  </html>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about-me.html">About Me</a></li>
+							<li><a href="hobbies.html">Other Hobbies</a></li>
+							<li><a href="current-project.html">Current Project</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>This is my portfolio, a website dedicated to<br />
+								projects, hobbies, and interests.</h1>
+								<p>I am Michael Smith, an aspiring computer science Major. All throughout high school I worked on small tiny projects that I thought were somewhat interesting enough to share.</p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
+									<a href="web-app.html">
+										<h2>My First Web App</h2>
+										<div class="content">
+											<p>This was my very first attempt at a web application using html, css, and js.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<a href="pi-clock.html">
+										<h2>Raspberry Pi Clock</h2>
+										<div class="content">
+											<p>A digital clock project for my Raspberry Pi. Written in Python and Tkinter.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<a href="card-game.html">
+										<h2>Card Games</h2>
+										<div class="content">
+											<p>My take on the classic card game "Go Fish". Written in Python using the command line as an interface.</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
